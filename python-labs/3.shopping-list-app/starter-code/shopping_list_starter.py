@@ -34,10 +34,44 @@ while choice.lower() != "e":
     if choice == "a":
         print("쇼핑이 끝나면 '끝'을 입력해 주세요.")
         while True:
+            items = []
             items = input("쇼핑 아이템을 입력하세요: ")
             if items != "끝":
-                shopping_list = [items]
+                shopping_list.append(items)
             elif items == "끝":
                 print("아이템이 입력 되었습니다.")
-                print(shopping_list[items])
+                print(shopping_list)
                 break
+
+    if choice == "b":
+        print(shopping_list)
+        print("버릴 품목을 다 입력하시면 '끝'을 입력해주세요.")
+        while True:
+            drop_items = input("버릴 품목을 입력해주세요: ")
+            if drop_items in shopping_list:
+                shopping_list.remove(drop_items)
+                print(shopping_list)
+            elif drop_items == "끝":
+                print("품목을 지웠습니다.")
+                print(shopping_list)
+                break
+
+    if choice == "c":
+        print("품목 확인")
+        print("확인을 다 하셨으면 '끝'을 입력해주세요.")
+        while True:
+            check_items = input("확인하고 싶은 품목을 입력하세요:")
+            if check_items in shopping_list:
+                print(check_items + "가 쇼핑리스트 안에 있습니다.")
+            elif check_items not in shopping_list:
+                print(check_items + "품목이 쇼핑리스트 안에 없습니다.")
+                break
+
+
+    if choice == "d":
+        print(shopping_list)
+
+
+    if choice == "e":
+        print("EXIT")
+        break
