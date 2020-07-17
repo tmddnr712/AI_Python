@@ -1,0 +1,34 @@
+'''def count_spaces(s):
+    return s.count(" ")
+
+print(count_spaces("hello world"))
+print(count_spaces("wow wow wow "))
+'''
+
+'''
+test_list = ['gfg', 'is', 'best', 'for', 'geeks']
+print("The original list : " + str(test_list))
+
+max_len = -1
+for ele in test_list:
+    if len(ele) > max_len:
+        max_len = len(ele)
+        res = ele
+
+print("Maximum length string is : " + res)
+'''
+
+
+'''
+word = input("Enter a word: ")
+word = word[::-1]
+print(word)
+'''
+
+'''
+def sum_to_n(n):
+    return (n + (n/n)) * 2
+
+print(sum_to_n(4))
+'''
+
